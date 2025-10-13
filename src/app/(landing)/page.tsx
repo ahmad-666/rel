@@ -4,18 +4,37 @@ import Badge from '@/components/Badge';
 import Container from '@/components/Container';
 import Header from '@/layout/components/Header';
 import GoogleSchema from '@/components/GoogleSchema';
+import LazySection from '@/components/LazySection';
 import { type Graph } from 'schema-dts';
 
 //* Dynamic imports -------------------
-const Faqs = dynamic(() => import('@landing/components/Faqs'));
-const Infos = dynamic(() => import('@landing/components/infos'));
-const Reviews = dynamic(() => import('@landing/components/reviews'));
-const ApiCode = dynamic(() => import('@landing/components/ApiCode'));
-const Features = dynamic(() => import('@landing/components/features'));
-const Integration = dynamic(() => import('@landing/components/Integration'));
-const ProcessOverview = dynamic(() => import('@landing/components/processOverview'));
-const TrustedCompanies = dynamic(() => import('@landing/components/TrustedCompanies'));
-const ReverseEmailLookup = dynamic(() => import('@landing/components/forms/reverseEmailLookup'));
+const Faqs = dynamic(() => import('@landing/components/Faqs'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const Infos = dynamic(() => import('@landing/components/infos'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const Reviews = dynamic(() => import('@landing/components/reviews'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const ApiCode = dynamic(() => import('@landing/components/ApiCode'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const Features = dynamic(() => import('@landing/components/features'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const Integration = dynamic(() => import('@landing/components/Integration'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const ProcessOverview = dynamic(() => import('@landing/components/processOverview'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
+const TrustedCompanies = dynamic(() => import('@landing/components/TrustedCompanies'), {
+    loading: () => <div className='h-32 animate-pulse rounded-lg bg-gray-100' />
+});
+const ReverseEmailLookup = dynamic(() => import('@landing/components/forms/reverseEmailLookup'), {
+    loading: () => <div className='h-96 animate-pulse rounded-lg bg-gray-100' />
+});
 
 //* Metadata --------------------------
 export const metadata: Metadata = {
@@ -115,41 +134,55 @@ const HomePage = () => {
                     </>
                 }
             />
-            <Container>
-                <section className='mt-24'>
-                    <Infos title='How Reverse Email Lookup Can Work for You' />
+            <LazySection>
+                <Container>
+                    <section className='mt-24'>
+                        <Infos title='How Reverse Email Lookup Can Work for You' />
+                    </section>
+                </Container>
+            </LazySection>
+            <LazySection>
+                <section className='tablet:mt-32 mt-24'>
+                    <Reviews />
                 </section>
-            </Container>
-            <section className='tablet:mt-32 mt-24'>
-                <Reviews />
-            </section>
+            </LazySection>
             {/* for shadow card overflow visible */}
-            <Container className='!overflow-visible'>
+            <LazySection>
+                <Container className='!overflow-visible'>
+                    <section className='tablet:mt-32 mt-24'>
+                        <Features
+                            badgeText='Our Values'
+                            badgeColor='pastelPink-dark4'
+                            title='Why Choose Us'
+                            description='Find real-time contact and company data from an email address.'
+                        />
+                    </section>
+                </Container>
+            </LazySection>
+            <LazySection>
                 <section className='tablet:mt-32 mt-24'>
-                    <Features
-                        badgeText='Our Values'
-                        badgeColor='pastelPink-dark4'
-                        title='Why Choose Us'
-                        description='Find real-time contact and company data from an email address.'
-                    />
+                    <ApiCode descriptionClassName='font-bold' />
                 </section>
-            </Container>
-            <section className='tablet:mt-32 mt-24'>
-                <ApiCode descriptionClassName='font-bold' />
-            </section>
-            <Container>
+            </LazySection>
+            <LazySection>
+                <Container>
+                    <section className='tablet:mt-32 mt-24'>
+                        <Integration />
+                    </section>
+                </Container>
+            </LazySection>
+            <LazySection>
+                <Container>
+                    <section className='tablet:mt-32 mt-24'>
+                        <ProcessOverview />
+                    </section>
+                </Container>
+            </LazySection>
+            <LazySection>
                 <section className='tablet:mt-32 mt-24'>
-                    <Integration />
+                    <Faqs />
                 </section>
-            </Container>
-            <Container>
-                <section className='tablet:mt-32 mt-24'>
-                    <ProcessOverview />
-                </section>
-            </Container>
-            <section className='tablet:mt-32 mt-24'>
-                <Faqs />
-            </section>
+            </LazySection>
         </div>
     );
 };

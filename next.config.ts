@@ -12,7 +12,11 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'media.reverseemaillookup.net'
             }
-        ]
+        ],
+        formats: ['image/webp', 'image/avif'],
+        minimumCacheTTL: 60,
+        dangerouslyAllowSVG: true,
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
     },
     async headers() {
         return [
@@ -67,7 +71,10 @@ const nextConfig: NextConfig = {
     },
     experimental: {
         //largePageDataBytes: 20 * 128 * 1000 //2mb(default is 128kb) , tweak nextjs max allow size for props of pages
-        //optimizePackageImports: ['package-name'] //only load the modules you are actually using
+        optimizePackageImports: ['@mui/material', 'swiper', 'shiki', 'framer-motion']
+    },
+    compiler: {
+        removeConsole: process.env.NODE_ENV === 'production'
     }
 };
 
