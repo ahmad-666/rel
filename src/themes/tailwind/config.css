@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+/*! disable tailwind theme on '/features/dashboard' directory to prevent any conflict */
+/* @source not "../../app/dashboard/"; */
+/*! disable tailwind theme on '/app/dashboard' directory to prevent any conflict  */
+/*? we will still import base tailwind styles and @layer base */
+
+@import './palette.css';
+@import './typography.css';
+@import './radius.css';
+@import './shadow.css';
+@import './animation.css';
+@import './breakpoints.css';
+@import './base.css';
+@import './utility.css';
+@import './components.css';
+
+@theme {
+    --spacing: 4px;
+}

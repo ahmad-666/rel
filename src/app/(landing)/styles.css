@@ -1,0 +1,16 @@
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+/* not use it because tailwind will automatically add it to our project and it can cause conflicts with tailwind styles */
+
+#landing {
+    .text-gradient-custom {
+        background: linear-gradient(104.56deg, #fd7c3b -5.58%, #ffffff 34.22%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

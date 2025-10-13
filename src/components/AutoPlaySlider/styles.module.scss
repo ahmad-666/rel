@@ -1,0 +1,11 @@
+.auto-play {
+    animation: auto-play var(--speed) linear 0s infinite;
+    @keyframes auto-play {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(var(--position));
+        }
+    }
+}

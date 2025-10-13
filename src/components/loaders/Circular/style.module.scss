@@ -1,0 +1,35 @@
+.circular-loader {
+    svg.animate {
+        animation: rotate 2s linear infinite;
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    circle {
+        stroke-dasharray: var(--dash-value);
+        stroke-dashoffset: 0px;
+    }
+    circle.animate {
+        stroke-dasharray: var(--animate-dash-value);
+        animation: stroke-animate 3s linear infinite;
+        @keyframes stroke-animate {
+            0% {
+                stroke-dashoffset: calc(var(--animate-dash-value) - var(--animate-loader-offset));
+                transform: rotate(0deg);
+            }
+            50% {
+                stroke-dashoffset: calc(0px + var(--animate-loader-offset));
+                transform: rotate(180deg);
+            }
+            100% {
+                stroke-dashoffset: calc(var(--animate-dash-value) - var(--animate-loader-offset));
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+/* because we have tailwind too then above code will face conflicts with tailwind so we don't use it */
+/* we should not add it inside #dashboard else it will override must of our paddings,margins because it gets higher priority */
+
+#dashboard {
+    .shadow-xs {
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.1);
+    }
+    .shadow-sm {
+        box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+}
