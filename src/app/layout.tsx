@@ -46,27 +46,9 @@ export default function RootLayout({
 }>) {
     return (
         <html dir='ltr' lang='en-US'>
-            <head>
-                <Script
-                    id='crisp-chat'
-                    strategy='beforeInteractive' //scripts with 'beforeInteractive' will always inject inside of <head> tag
-                    dangerouslySetInnerHTML={{
-                        __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="${envs.crispWebsiteId}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
-                    }}
-                />
-                <Script
-                    id='microsoft-clarity'
-                    strategy='beforeInteractive'
-                    dangerouslySetInnerHTML={{
-                        __html: `(function(c,l,a,r,i,t,y){
-                            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                        })(window, document, "clarity", "script", "rs2cefhfd6");`
-                    }}
-                />
-            </head>
-            <GoogleTagManager gtmId={envs.gtmKey} />
+            {/* <head>
+              
+            </head> */}
             <body className={`antialiased ${manrope.className} ${manrope.variable}`}>
                 <SpeedInsights />
                 <GoogleOAuthProvider>
@@ -82,11 +64,31 @@ export default function RootLayout({
                     </ReactQueryProvider>
                 </GoogleOAuthProvider>
                 <Script
+                    id='crisp-chat'
+                    strategy='lazyOnload' //scripts with 'beforeInteractive' will always inject inside of <head> tag
+                    dangerouslySetInnerHTML={{
+                        __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="${envs.crispWebsiteId}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
+                    }}
+                />
+                <Script
+                    id='microsoft-clarity'
+                    strategy='lazyOnload'
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(c,l,a,r,i,t,y){
+                            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                        })(window, document, "clarity", "script", "rs2cefhfd6");`
+                    }}
+                />
+                <Script
                     id='optin-monster'
+                    strategy='lazyOnload'
                     dangerouslySetInnerHTML={{
                         __html: `(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,374739,397342);`
                     }}
                 />
+                <GoogleTagManager gtmId={envs.gtmKey} />
             </body>
         </html>
     );
