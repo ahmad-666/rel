@@ -123,6 +123,7 @@ export default function Signup({ ...rest }: Props) {
                         <Box>
                             <Link href='/'>
                                 <Image
+                                    priority
                                     src='/imgs/logos/logo.png'
                                     alt='reverse email lookup'
                                     width={100}

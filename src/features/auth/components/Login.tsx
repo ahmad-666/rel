@@ -75,6 +75,7 @@ export default function Login({ ...rest }: Props) {
             <Box>
                 <Link href='/'>
                     <Image
+                        priority
                         src='/imgs/logos/logo.png'
                         alt='reverse email lookup'
                         width={100}

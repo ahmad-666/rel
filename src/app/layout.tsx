@@ -10,6 +10,7 @@ import AuthChecker from '@/components/AuthChecker';
 import { manrope } from '@/themes/font';
 import envs from '@/configs/env';
 import './globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 //* Metadata -------------------------
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({
             </head>
             <GoogleTagManager gtmId={envs.gtmKey} />
             <body className={`antialiased ${manrope.className} ${manrope.variable}`}>
+                <SpeedInsights />
                 <GoogleOAuthProvider>
                     <ReactQueryProvider>
                         <SnackbarProvider>
