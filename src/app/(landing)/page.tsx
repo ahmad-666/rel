@@ -134,7 +134,7 @@ const HomePage = () => {
                     </>
                 }
             />
-            <LazySection>
+            {/* <LazySection>
                 <Container>
                     <section className='mt-24'>
                         <Infos title='How Reverse Email Lookup Can Work for You' />
@@ -146,7 +146,6 @@ const HomePage = () => {
                     <Reviews />
                 </section>
             </LazySection>
-            {/* for shadow card overflow visible */}
             <LazySection>
                 <Container className='!overflow-visible'>
                     <section className='tablet:mt-32 mt-24'>
@@ -182,7 +181,7 @@ const HomePage = () => {
                 <section className='tablet:mt-32 mt-24'>
                     <Faqs />
                 </section>
-            </LazySection>
+            </LazySection> */}
         </div>
     );
 };
