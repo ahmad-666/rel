@@ -50,7 +50,7 @@ export default function RootLayout({
               
             </head> */}
             <body className={`antialiased ${manrope.className} ${manrope.variable}`}>
-                <SpeedInsights />
+                {/* <SpeedInsights /> */}
                 <GoogleOAuthProvider>
                     <ReactQueryProvider>
                         <SnackbarProvider>
@@ -88,7 +88,7 @@ export default function RootLayout({
                         __html: `(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,374739,397342);`
                     }}
                 />
-                <GoogleTagManager gtmId={envs.gtmKey} />
+                {/* <GoogleTagManager gtmId={envs.gtmKey} /> */}
             </body>
         </html>
     );

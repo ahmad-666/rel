@@ -23,9 +23,7 @@ const Header = ({
     descriptionClassName = ''
 }: HeaderProps) => {
     return (
-        <header
-            className={`bg-primary-light5 laptop:pt-60 relative bg-[url('/imgs/patterns/grid.png')] bg-contain pt-40 pb-8 text-center ${className}`}
-        >
+        <header className={`bg-primary-light5 laptop:pt-60 relative bg-contain pt-40 pb-8 text-center ${className}`}>
             <Container>
                 {!!topChildren && <div>{topChildren}</div>}
                 <h1

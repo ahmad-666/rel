@@ -72,7 +72,7 @@ const TrustedCompanies = ({
     return (
         <div className={`py-8 ${className}`}>
             <h2 className={`text-title-md text-neutral text-center ${titleClassName}`}>{title}</h2>
-            <div className='max-w-tablet relative mx-auto mt-6'>
+            {/* <div className='max-w-tablet relative mx-auto mt-6'>
                 <AutoPlaySlider cloneCount={cloneCount} slides={companies} speed={companies.length * 5000} space={24}>
                     {(slide) => (
                         <div className='flex w-24 flex-col items-center justify-center'>
@@ -106,7 +106,7 @@ const TrustedCompanies = ({
                         />
                     </>
                 )}
-            </div>
+            </div> */}
         </div>
     );
 };
