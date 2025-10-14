@@ -14,7 +14,7 @@ const Landing = ({ children, className = '' }: LandingProps) => {
         <div className={`${className}`}>
             {/* <Navbar /> */}
             <main className='mt-0 min-h-screen'>{children}</main>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };
