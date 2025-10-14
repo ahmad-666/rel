@@ -127,12 +127,13 @@ const HomePage = () => {
                         ))}
                     </ul>
                 }
-                bottomChildren={
-                    <>
-                        <ReverseEmailLookup className='mt-16' />
-                        <TrustedCompanies className='mt-7' />
-                    </>
-                }
+                className='pb-100'
+                // bottomChildren={
+                //     <>
+                //         <ReverseEmailLookup className='mt-16' />
+                //         <TrustedCompanies className='mt-7' />
+                //     </>
+                // }
             />
             {/* <LazySection>
                 <Container>
