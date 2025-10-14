@@ -159,11 +159,11 @@ const HomePage = () => {
                     </section>
                 </Container>
             </LazySection>
-            <LazySection>
+            {/* <LazySection>
                 <section className='tablet:mt-32 mt-24'>
                     <ApiCode descriptionClassName='font-bold' />
                 </section>
-            </LazySection>
+            </LazySection> */}
             <LazySection>
                 <Container>
                     <section className='tablet:mt-32 mt-24'>
