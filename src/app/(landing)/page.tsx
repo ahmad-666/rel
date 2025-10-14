@@ -135,7 +135,7 @@ const HomePage = () => {
                 //     </>
                 // }
             />
-            {/* <LazySection>
+            <LazySection>
                 <Container>
                     <section className='mt-24'>
                         <Infos title='How Reverse Email Lookup Can Work for You' />
@@ -182,7 +182,7 @@ const HomePage = () => {
                 <section className='tablet:mt-32 mt-24'>
                     <Faqs />
                 </section>
-            </LazySection> */}
+            </LazySection>
         </div>
     );
 };
