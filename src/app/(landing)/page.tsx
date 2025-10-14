@@ -171,7 +171,7 @@ const HomePage = () => {
                     </section>
                 </Container>
             </LazySection>
-            <LazySection>
+            {/* <LazySection>
                 <Container>
                     <section className='tablet:mt-32 mt-24'>
                         <ProcessOverview />
@@ -182,7 +182,7 @@ const HomePage = () => {
                 <section className='tablet:mt-32 mt-24'>
                     <Faqs />
                 </section>
-            </LazySection>
+            </LazySection> */}
         </div>
     );
 };
