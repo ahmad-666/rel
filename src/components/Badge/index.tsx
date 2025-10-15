@@ -65,7 +65,7 @@ const Badge = ({
             }
         >
             {children}
-            {icon && <Icon icon={icon} size={size === 'sm' ? 'xs' : size === 'md' ? 'md' : 'lg'} color={textColor} />}
+            {/* {icon && <Icon icon={icon} size={size === 'sm' ? 'xs' : size === 'md' ? 'md' : 'lg'} color={textColor} />} */}
             <p className={`${cssClasses.textStyle} ${textClassName}`} style={{ color: textColor }}>
                 {text}
             </p>

@@ -1,7 +1,7 @@
-'use client';
+// 'use client';
 
 import { Icon as Iconify, type IconProps } from '@iconify/react';
-import useColor from '@/hooks/useColor';
+// import useColor from '@/hooks/useColor';
 
 export type Size = 'xs' | 'sm' | '2sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | number;
 type Props = IconProps & {
@@ -10,7 +10,7 @@ type Props = IconProps & {
 };
 
 export default function Icon({ icon, size = 'md', color = 'primary', style, className = '', ...rest }: Props) {
-    const parsedColor = useColor(color);
+    // const parsedColor = useColor(color);
     const getSize = () => {
         let s = 0;
         switch (size) {
@@ -56,7 +56,7 @@ export default function Icon({ icon, size = 'md', color = 'primary', style, clas
         <Iconify
             icon={icon}
             fontSize={iconSize}
-            color={parsedColor}
+            color={'black'}
             className={`${className}`}
             style={{
                 //* add bot className,style so we have supports for both tailwind,mui
