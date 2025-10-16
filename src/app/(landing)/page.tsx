@@ -135,7 +135,7 @@ const HomePage = () => {
                 //     </>
                 // }
             />
-            {/* <LazySection>
+            <LazySection>
                 <Container>
                     <section className='mt-24'>
                         <Infos title='How Reverse Email Lookup Can Work for You' />
@@ -158,20 +158,20 @@ const HomePage = () => {
                         />
                     </section>
                 </Container>
-            </LazySection> */}
-            {/* <LazySection>
+            </LazySection>
+            <LazySection>
                 <section className='tablet:mt-32 mt-24'>
                     <ApiCode descriptionClassName='font-bold' />
                 </section>
-            </LazySection> */}
-            {/* <LazySection>
+            </LazySection>
+            <LazySection>
                 <Container>
                     <section className='tablet:mt-32 mt-24'>
                         <Integration />
                     </section>
                 </Container>
-            </LazySection> */}
-            {/* <LazySection>
+            </LazySection>
+            <LazySection>
                 <Container>
                     <section className='tablet:mt-32 mt-24'>
                         <ProcessOverview />
@@ -182,7 +182,7 @@ const HomePage = () => {
                 <section className='tablet:mt-32 mt-24'>
                     <Faqs />
                 </section>
-            </LazySection> */}
+            </LazySection>
         </div>
     );
 };
