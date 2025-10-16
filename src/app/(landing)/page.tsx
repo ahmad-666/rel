@@ -113,36 +113,37 @@ const HomePage = () => {
         <div>
             <GoogleSchema jsonLd={jsonLd} />
             <Header
-                title='Reverse Email Lookup – Find Person & Company Information from Any Email'
-                titleClassName='!max-w-200'
-                description='ReverseEmailLookup.net helps you instantly uncover detailed insights from any email address — including full names, job titles, companies, and social profiles. With powerful API access, seamless CRM integration, and a Google Sheets™ add-on, you can enrich contacts, verify leads, and keep your data accurate across all your sales and marketing tools.'
-                descriptionClassName='!max-w-215'
-                topChildren={
-                    <ul className='flex items-center justify-center gap-1'>
-                        {headerBadgesData.map((text) => (
-                            <li
-                                key={text}
-                                className='bg-warning-light2 border-warning-light1 text-warning-dark5 text-label-md inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5'
-                            >
-                                <Image
-                                    priority
-                                    src='/imgs/others/ph--check-circle-fill.png'
-                                    alt={text}
-                                    width={16}
-                                    height={16}
-                                    className='shrink-0'
-                                />
-                                {text}
-                            </li>
-                        ))}
-                    </ul>
-                }
-                bottomChildren={
-                    <>
-                        <ReverseEmailLookup className='mt-16' />
-                        <TrustedCompanies className='mt-7' />
-                    </>
-                }
+                title='Hello world'
+                className='!py-100'
+                // titleClassName='!max-w-200'
+                // description='ReverseEmailLookup.net helps you instantly uncover detailed insights from any email address — including full names, job titles, companies, and social profiles. With powerful API access, seamless CRM integration, and a Google Sheets™ add-on, you can enrich contacts, verify leads, and keep your data accurate across all your sales and marketing tools.'
+                // descriptionClassName='!max-w-215'
+                // topChildren={
+                //     <ul className='flex items-center justify-center gap-1'>
+                //         {headerBadgesData.map((text) => (
+                //             <li
+                //                 key={text}
+                //                 className='bg-warning-light2 border-warning-light1 text-warning-dark5 text-label-md inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5'
+                //             >
+                //                 <Image
+                //                     priority
+                //                     src='/imgs/others/ph--check-circle-fill.png'
+                //                     alt={text}
+                //                     width={16}
+                //                     height={16}
+                //                     className='shrink-0'
+                //                 />
+                //                 {text}
+                //             </li>
+                //         ))}
+                //     </ul>
+                // }
+                // bottomChildren={
+                //     <>
+                //         <ReverseEmailLookup className='mt-16' />
+                //         <TrustedCompanies className='mt-7' />
+                //     </>
+                // }
             />
             <Container>
                 <section className='mt-24'>
