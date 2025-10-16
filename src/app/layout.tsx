@@ -63,7 +63,7 @@ export default function RootLayout({
                         </SnackbarProvider>
                     </ReactQueryProvider>
                 </GoogleOAuthProvider>
-                <AfterInteractive>
+                {/* <AfterInteractive>
                     <Script
                         id='crisp-chat'
                         strategy='lazyOnload' //scripts with 'beforeInteractive' will always inject inside of <head> tag
@@ -90,7 +90,7 @@ export default function RootLayout({
                         }}
                     />
                     <GoogleTagManager gtmId={envs.gtmKey} />
-                </AfterInteractive>
+                </AfterInteractive> */}
             </body>
         </html>
     );

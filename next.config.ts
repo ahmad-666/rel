@@ -66,13 +66,6 @@ const nextConfig: NextConfig = {
                 ]
             }
         ];
-    },
-    experimental: {
-        //largePageDataBytes: 20 * 128 * 1000 //2mb(default is 128kb) , tweak nextjs max allow size for props of pages
-        optimizePackageImports: ['@mui/material', 'swiper', 'shiki', 'framer-motion']
-    },
-    compiler: {
-        removeConsole: process.env.NODE_ENV === 'production'
     }
 };
 
