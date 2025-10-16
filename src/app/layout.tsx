@@ -7,10 +7,10 @@ import ReactQueryProvider from '@/providers/ReactQuery';
 import SnackbarProvider from '@/providers/Snackbar';
 import UTMChecker from '@/components/UTMChecker';
 import AuthChecker from '@/components/AuthChecker';
+import AfterInteractive from '@/components/AfterInteractive';
 import { manrope } from '@/themes/font';
 import envs from '@/configs/env';
 import './globals.css';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 //* Metadata -------------------------
 export const metadata: Metadata = {
@@ -63,32 +63,34 @@ export default function RootLayout({
                         </SnackbarProvider>
                     </ReactQueryProvider>
                 </GoogleOAuthProvider>
-                <Script
-                    id='crisp-chat'
-                    strategy='lazyOnload' //scripts with 'beforeInteractive' will always inject inside of <head> tag
-                    dangerouslySetInnerHTML={{
-                        __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="${envs.crispWebsiteId}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
-                    }}
-                />
-                <Script
-                    id='microsoft-clarity'
-                    strategy='lazyOnload'
-                    dangerouslySetInnerHTML={{
-                        __html: `(function(c,l,a,r,i,t,y){
+                <AfterInteractive>
+                    <Script
+                        id='crisp-chat'
+                        strategy='lazyOnload' //scripts with 'beforeInteractive' will always inject inside of <head> tag
+                        dangerouslySetInnerHTML={{
+                            __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="${envs.crispWebsiteId}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
+                        }}
+                    />
+                    <Script
+                        id='microsoft-clarity'
+                        strategy='lazyOnload'
+                        dangerouslySetInnerHTML={{
+                            __html: `(function(c,l,a,r,i,t,y){
                             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                         })(window, document, "clarity", "script", "rs2cefhfd6");`
-                    }}
-                />
-                <Script
-                    id='optin-monster'
-                    strategy='lazyOnload'
-                    dangerouslySetInnerHTML={{
-                        __html: `(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,374739,397342);`
-                    }}
-                />
-                <GoogleTagManager gtmId={envs.gtmKey} />
+                        }}
+                    />
+                    <Script
+                        id='optin-monster'
+                        strategy='lazyOnload'
+                        dangerouslySetInnerHTML={{
+                            __html: `(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,374739,397342);`
+                        }}
+                    />
+                    <GoogleTagManager gtmId={envs.gtmKey} />
+                </AfterInteractive>
             </body>
         </html>
     );
