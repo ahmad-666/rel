@@ -113,12 +113,8 @@ const HomePage = () => {
     return (
         <div>
             <GoogleSchema jsonLd={jsonLd} />
-            <Header
-                title='Reverse Email Lookup – Find Person & Company Information from Any Email'
-                titleClassName='!max-w-200'
-                description='ReverseEmailLookup.net helps you instantly uncover detailed insights from any email address — including full names, job titles, companies, and social profiles. With powerful API access, seamless CRM integration, and a Google Sheets™ add-on, you can enrich contacts, verify leads, and keep your data accurate across all your sales and marketing tools.'
-                descriptionClassName='!max-w-215'
-                topChildren={
+            <header className={`bg-primary-light5 laptop:pt-60 relative bg-contain pt-40 pb-100 text-center`}>
+                <Container>
                     <ul className='flex items-center justify-center gap-1'>
                         {headerBadgesData.map((text) => (
                             <li key={text}>
@@ -126,15 +122,15 @@ const HomePage = () => {
                             </li>
                         ))}
                     </ul>
-                }
-                className='pb-100'
-                // bottomChildren={
-                //     <>
-                //         <ReverseEmailLookup className='mt-16' />
-                //         <TrustedCompanies className='mt-7' />
-                //     </>
-                // }
-            />
+                    <h1 className={``}>Reverse Email Lookup – Find Person & Company Information from Any Email </h1>
+                    <p className={``}>
+                        ReverseEmailLookup.net helps you instantly uncover detailed insights from any email address —
+                        including full names, job titles, companies, and social profiles. With powerful API access,
+                        seamless CRM integration, and a Google Sheets™ add-on, you can enrich contacts, verify leads,
+                        and keep your data accurate across all your sales and marketing tools.
+                    </p>
+                </Container>
+            </header>
             <LazySection>
                 <Container>
                     <section className='mt-24'>
