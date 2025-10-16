@@ -13,8 +13,6 @@ const nextConfig: NextConfig = {
                 hostname: 'media.reverseemaillookup.net'
             }
         ],
-        formats: ['image/webp', 'image/avif'],
-        minimumCacheTTL: 60,
         dangerouslyAllowSVG: true,
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
     },

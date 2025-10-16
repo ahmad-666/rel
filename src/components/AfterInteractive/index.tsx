@@ -25,7 +25,7 @@ export default function AfterInteractive({
     keyPress = true,
     scroll = true,
     resize = false,
-    timeout = 3000,
+    timeout = 5000,
     children
 }: Props) {
     const [render, setRender] = useState(false);

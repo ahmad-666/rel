@@ -1,10 +1,9 @@
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { type Metadata } from 'next';
-import Badge from '@/components/Badge';
 import Container from '@/components/Container';
 import Header from '@/layout/components/Header';
 import GoogleSchema from '@/components/GoogleSchema';
-import LazySection from '@/components/LazySection';
 import { type Graph } from 'schema-dts';
 
 //* Dynamic imports -------------------
@@ -121,8 +120,19 @@ const HomePage = () => {
                 topChildren={
                     <ul className='flex items-center justify-center gap-1'>
                         {headerBadgesData.map((text) => (
-                            <li key={text}>
-                                <Badge text={text} size='sm' icon='icon-park-solid:check-one' color='warning-dark5' />
+                            <li
+                                key={text}
+                                className='bg-warning-light2 border-warning-light1 text-warning-dark5 text-label-md inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5'
+                            >
+                                <Image
+                                    priority
+                                    src='/imgs/others/ph--check-circle-fill.png'
+                                    alt={text}
+                                    width={16}
+                                    height={16}
+                                    className='shrink-0'
+                                />
+                                {text}
                             </li>
                         ))}
                     </ul>
@@ -134,54 +144,40 @@ const HomePage = () => {
                     </>
                 }
             />
-            <LazySection>
-                <Container>
-                    <section className='mt-24'>
-                        <Infos title='How Reverse Email Lookup Can Work for You' />
-                    </section>
-                </Container>
-            </LazySection>
-            <LazySection>
-                <section className='tablet:mt-32 mt-24'>
-                    <Reviews />
+            <Container>
+                <section className='mt-24'>
+                    <Infos title='How Reverse Email Lookup Can Work for You' />
                 </section>
-            </LazySection>
-            <LazySection>
-                <Container className='!overflow-visible'>
-                    <section className='tablet:mt-32 mt-24'>
-                        <Features
-                            badgeText='Our Values'
-                            badgeColor='pastelPink-dark4'
-                            title='Why Choose Us'
-                            description='Find real-time contact and company data from an email address.'
-                        />
-                    </section>
-                </Container>
-            </LazySection>
-            <LazySection>
+            </Container>
+            <section className='tablet:mt-32 mt-24'>
+                <Reviews />
+            </section>
+            <Container className='!overflow-visible'>
                 <section className='tablet:mt-32 mt-24'>
-                    <ApiCode descriptionClassName='font-bold' />
+                    <Features
+                        badgeText='Our Values'
+                        badgeColor='pastelPink-dark4'
+                        title='Why Choose Us'
+                        description='Find real-time contact and company data from an email address.'
+                    />
                 </section>
-            </LazySection>
-            <LazySection>
-                <Container>
-                    <section className='tablet:mt-32 mt-24'>
-                        <Integration />
-                    </section>
-                </Container>
-            </LazySection>
-            <LazySection>
-                <Container>
-                    <section className='tablet:mt-32 mt-24'>
-                        <ProcessOverview />
-                    </section>
-                </Container>
-            </LazySection>
-            <LazySection>
+            </Container>
+            <section className='tablet:mt-32 mt-24'>
+                <ApiCode descriptionClassName='font-bold' />
+            </section>
+            <Container>
                 <section className='tablet:mt-32 mt-24'>
-                    <Faqs />
+                    <Integration />
                 </section>
-            </LazySection>
+            </Container>
+            <Container>
+                <section className='tablet:mt-32 mt-24'>
+                    <ProcessOverview />
+                </section>
+            </Container>
+            <section className='tablet:mt-32 mt-24'>
+                <Faqs />
+            </section>
         </div>
     );
 };
