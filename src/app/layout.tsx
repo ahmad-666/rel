@@ -10,7 +10,7 @@ import AuthChecker from '@/components/AuthChecker';
 import AfterInteractive from '@/components/AfterInteractive';
 // import { manrope } from '@/themes/font';
 import envs from '@/configs/env';
-import './globals.css';
+// import './globals.css';
 
 //* Metadata -------------------------
 export const metadata: Metadata = {
@@ -50,8 +50,9 @@ export default function RootLayout({
               
             </head> */}
             <body className={`antialiased`}>
+                <div id='app'>{children}</div>
                 {/* <SpeedInsights /> */}
-                <GoogleOAuthProvider>
+                {/* <GoogleOAuthProvider>
                     <ReactQueryProvider>
                         <SnackbarProvider>
                             <Suspense>
@@ -62,7 +63,7 @@ export default function RootLayout({
                             <div id='portals' />
                         </SnackbarProvider>
                     </ReactQueryProvider>
-                </GoogleOAuthProvider>
+                </GoogleOAuthProvider> */}
                 {/* <AfterInteractive>
                     <Script
                         id='crisp-chat'
