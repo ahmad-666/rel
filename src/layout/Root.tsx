@@ -12,9 +12,9 @@ type LandingProps = {
 const Landing = ({ children, className = '' }: LandingProps) => {
     return (
         <div className={`${className}`}>
-            {/* <Navbar /> */}
+            <Navbar />
             <main className='mt-0 min-h-screen'>{children}</main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 };
