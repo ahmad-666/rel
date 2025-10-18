@@ -112,6 +112,7 @@ const HomePage = () => {
     return (
         <div>
             <GoogleSchema jsonLd={jsonLd} />
+            <h1>Reverse Email Lookup – Find Person & Company Information from Any Email</h1>
             {/* <Header
                 title='Reverse Email Lookup – Find Person & Company Information from Any Email'
                 titleClassName='!max-w-200'
