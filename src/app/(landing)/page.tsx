@@ -112,8 +112,7 @@ const HomePage = () => {
     return (
         <div>
             <GoogleSchema jsonLd={jsonLd} />
-            <h1>Reverse Email Lookup – Find Person & Company Information from Any Email</h1>
-            {/* <Header
+            <Header
                 title='Reverse Email Lookup – Find Person & Company Information from Any Email'
                 titleClassName='!max-w-200'
                 description='ReverseEmailLookup.net helps you instantly uncover detailed insights from any email address — including full names, job titles, companies, and social profiles. With powerful API access, seamless CRM integration, and a Google Sheets™ add-on, you can enrich contacts, verify leads, and keep your data accurate across all your sales and marketing tools.'
@@ -145,6 +144,7 @@ const HomePage = () => {
                 //     </>
                 // }
             />
+            {/*
             <Container>
                 <section className='mt-24'>
                     <Infos title='How Reverse Email Lookup Can Work for You' />

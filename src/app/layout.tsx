@@ -10,7 +10,7 @@ import AuthChecker from '@/components/AuthChecker';
 import AfterInteractive from '@/components/AfterInteractive';
 // import { manrope } from '@/themes/font';
 import envs from '@/configs/env';
-// import './globals.css';
+import './globals.css';
 
 //* Metadata -------------------------
 export const metadata: Metadata = {

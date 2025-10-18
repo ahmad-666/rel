@@ -10,7 +10,8 @@ body {
     height: 100%;
 }
 body {
-    font-family: var(--font-manrope), Roboto, sans-serif;
+    /* font-family: var(--font-manrope), Roboto, sans-serif; */
+    font-family: initial !important;
     font-size: 1rem;
     color: #0c0c0c;
     background: white;
