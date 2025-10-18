@@ -8,7 +8,7 @@ import SnackbarProvider from '@/providers/Snackbar';
 import UTMChecker from '@/components/UTMChecker';
 import AuthChecker from '@/components/AuthChecker';
 import AfterInteractive from '@/components/AfterInteractive';
-import { manrope } from '@/themes/font';
+// import { manrope } from '@/themes/font';
 import envs from '@/configs/env';
 import './globals.css';
 
@@ -49,7 +49,7 @@ export default function RootLayout({
             {/* <head>
               
             </head> */}
-            <body className={`antialiased ${manrope.className} ${manrope.variable}`}>
+            <body className={`antialiased`}>
                 {/* <SpeedInsights /> */}
                 <GoogleOAuthProvider>
                     <ReactQueryProvider>
